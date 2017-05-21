@@ -80,8 +80,8 @@ df.to_csv("data.csv")  # Save it
 mean_cong = df[(df["Trial_Type"]=="Congruent") & (df["Response"]==1)]["RT"].mean()
 mean_neu = df[(df["Trial_Type"]=="Neutral") & (df["Response"]==1)]["RT"].mean()
 mean_incong = df[(df["Trial_Type"]=="Incongruent") & (df["Response"]==1)]["RT"].mean()
-print("Mean RT Congruent: " + str(round(mean_cong, 2)))  # Print the mean of congruent
-print("Mean RT Neutral: " + str(round(mean_neu, 2)))  # Print the mean of neutral
-print("Mean RT Incongruent: " + str(round(mean_incong, 2)))  # Print the mean of incongruent
+print(("Mean RT Congruent: " + str(round(mean_cong, 2))))  # Print the mean of congruent
+print(("Mean RT Neutral: " + str(round(mean_neu, 2))))  # Print the mean of neutral
+print(("Mean RT Incongruent: " + str(round(mean_incong, 2))))  # Print the mean of incongruent
 
 n.close()  # Close neuropsydia

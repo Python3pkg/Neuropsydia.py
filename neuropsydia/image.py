@@ -335,7 +335,7 @@ def image(file, x=0, y=0, cache=None, path='', extension='', size=1.0, unit="n",
             try:
                 image = cache[path + file + '_' + str(size) + '_' + str(unit) + '_' + str(scale_by) + '_' + str(rotate) + '_' + str(opacity) + '_' + str(monitor_diagonal) + '_' + extension]
             except:
-                print('NEUROPSYDIA ERROR: image(): file not in given cache: ' + file)
+                print(('NEUROPSYDIA ERROR: image(): file not in given cache: ' + file))
                 cache = preload(file=file, cache=cache, path=path, extension=extension, size=size, unit=unit, scale_by=scale_by, fullscreen=fullscreen, rotate=rotate, scramble=scramble, compress=compress, compression=compression, opacity=opacity, monitor_diagonal=monitor_diagonal)
                 image = cache[path + file + '_' + str(size) + '_' + str(unit) + '_' + str(scale_by) + '_' + str(rotate) + '_' + str(opacity) + '_' + str(monitor_diagonal) + '_' + extension]
 

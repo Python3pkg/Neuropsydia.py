@@ -188,14 +188,14 @@ def scale(style='red', x=0, y=-3.3, anchors=None, anchors_space=2, anchors_size=
 
     if analog == False:
         #initialize the position and label list
-        point_list_range = range(len(range(edges[0],edges[1],step))+1) #is the number of elements in order
+        point_list_range = list(range(len(list(range(edges[0],edges[1],step)))+1)) #is the number of elements in order
         points_position = []
         points_position_raw = [] #positions for points in order to ease the fixation of the cursor
         label_list = []
         #calculate them
         for i in point_list_range:
-            points_position.append(edge_left + i*line_length/len(range(edges[0],edges[1],step)))
-            points_position_raw.append(edge_left_raw + i*line_length_raw/len(range(edges[0],edges[1],step)))
+            points_position.append(edge_left + i*line_length/len(list(range(edges[0],edges[1],step))))
+            points_position_raw.append(edge_left_raw + i*line_length_raw/len(list(range(edges[0],edges[1],step))))
             if labels == "numeric" or labels == "num" or labels == "numbers":
                 label_list.append(str(i))
             elif isinstance(labels, list):

@@ -899,7 +899,7 @@ def color(color):
         try:
             return(color_list[color])
         except:
-            print("NEUROPSYDIA WARNING: color() was used, however the argument " + str(color) + " was not detected and might cause errors.")
+            print(("NEUROPSYDIA WARNING: color() was used, however the argument " + str(color) + " was not detected and might cause errors."))
             return(color)
     else:
         return(color)
